@@ -67,7 +67,7 @@ jobs:
         tag_with_ref: true
         tag_with_sha: true
     #    tags: ${{ github.sha }}
-        tags: ${{ env.REGISTRY_HOSTNAME }}
+        tags: ${{ env.REGISTRY_HOSTNAME }}/${{ env.ICR_NAMESPACE }}/${{ env.IMAGE_NAME }}:${{ env.GITHUB_SHA }}
 
     # Push the image to IBM Container Registry
     - name: Push the image to ICR
